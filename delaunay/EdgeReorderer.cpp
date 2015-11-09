@@ -98,7 +98,6 @@ namespace Delaunay {
 			}
 		}
 
-		_edges.resize( newEdges.size() );
 		std::copy( newEdges.begin(), newEdges.end(),
 				std::inserter( _edges, _edges.begin() ) );
 	}

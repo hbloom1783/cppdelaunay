@@ -117,7 +117,10 @@ namespace Delaunay
 
 		std::vector< Site* > list;
 		for( std::vector< Edge* >::iterator it = _edges.begin( ); it != _edges.end( ); ++it ){
-			list.push_back( neighborSite( *it ) );
+            if ((*it)->visible())
+            {
+                list.push_back( neighborSite( *it ) );
+            }
 		}
 		return list;
 	}
